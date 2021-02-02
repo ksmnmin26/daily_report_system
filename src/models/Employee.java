@@ -113,7 +113,7 @@ public class Employee {
         this.updated_at = updated_at;
     }
 
-    @Column(name="delete_flag",nullable=false)
+    @Column(name="delete_flag",nullable=false)//削除された従業員かどうか
     private Integer delete_flag;
 
 
