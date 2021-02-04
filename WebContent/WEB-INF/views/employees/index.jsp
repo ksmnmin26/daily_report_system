@@ -21,7 +21,7 @@
                         <td><c:out value="${employee.name }"/></td>
                         <td>
                             <c:choose>
-                                <c:when test="${employee.detete_flag==1}">
+                                <c:when test="${employee.detete_flag==1}">//削除された従業員が１
                                     (削除済み)
                                 </c:when>
                                 <c:otherwise>
