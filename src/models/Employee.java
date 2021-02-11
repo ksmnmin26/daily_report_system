@@ -27,7 +27,7 @@ import javax.persistence.Table;
             query="SELECT COUNT(e) FROM Employee AS e WHERE e.code=:code"
             ),
     @NamedQuery(
-            name="chechLoginCodeAnfPassword",//従業員がログインするときに社員番号とパスワードが正しいかをチェック
+            name="checkLoginCodeAndPassword",//従業員がログインするときに社員番号とパスワードが正しいかをチェック
             query="SELECT e FROM Employee AS e WHERE e.delete_flag=0 AND e.code=:code AND e.password=:pass"
             )
 })

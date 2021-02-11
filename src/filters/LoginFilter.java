@@ -8,7 +8,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpSession;
 
 import models.Employee;
 
@@ -66,17 +65,19 @@ public class LoginFilter implements Filter {
            }else{  //ログイン画面について
                //ログインしているのにログイン画面を表示させようとした場合は
                //システムのトップページにリダイレクト
-               if(e!=null)//ログインしている場合は
+
+              if(e!=null){
                    ((HttpServletResponse)response).sendRedirect(context_path+"/");
                    return;
+              }
+
            }
 
-
-           }
 
        }
-        chain.doFilter(request, response);
-    }
+
+    chain.doFilter(request, response);
+}
 
     /**
      * @see Filter#init(FilterConfig)
