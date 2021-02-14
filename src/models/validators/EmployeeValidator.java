@@ -53,7 +53,7 @@ private static String validateCode(String code,Boolean codeDuplicateCheckFlag){
             return "入力された社員番号の情報はすでに存在しています。";
         }
     }
-    return"";
+    return "";
 }
 
 //社員名の必須入力チェック
