@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 
         Employee e = null;
 
-        if(code!=null&&!code.equals("")&&plain_pass!=null&&plain_pass.equals("")){
+        if(code!=null&&!code.equals("")&&plain_pass!=null&&!plain_pass.equals("")){
             EntityManager em=DBUtil.createEntityManager();
 
             //暗号化に必要なpepper文字列を取得
