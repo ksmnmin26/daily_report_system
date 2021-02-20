@@ -42,6 +42,26 @@ public class Report {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
+    @ManyToOne
+    @JoinColumn(name="employee_id",nullable=false)
+    private Employee employee;
+
+    @Column(name="report_date",nullable=false)
+    private Date report_date;
+
+    @Column(name="title",length=255,nullable=false)
+    private String title;
+
+    @Lob
+    @Column(name="content",nullable=false)
+    private String content;
+
+    @Column(name="created_at",nullable=false)
+    private Timestamp created_at;
+
+    @Column(name="updated_at",nullable=false)
+    private Timestamp updated_at;
+
     public Integer getId() {
         return id;
     }
@@ -98,24 +118,6 @@ public class Report {
         this.updated_at = updated_at;
     }
 
-    @ManyToOne
-    @JoinColumn(name="employee_id",nullable=false)
-    private Employee employee;
 
-    @Column(name="report_date",nullable=false)
-    private Date report_date;
-
-    @Column(name="title",length=255,nullable=false)
-    private String title;
-
-    @Lob
-    @Column(name="content",nullable=false)
-    private String content;
-
-    @Column(name="created_at",nullable=false)
-    private Timestamp created_at;
-
-    @Column(name="update_at",nullable=false)
-    private Timestamp updated_at;
 
 }

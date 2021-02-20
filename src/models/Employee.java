@@ -49,10 +49,11 @@ public class Employee {
 
     @Column(name="admin_flag",nullable=false)
     private Integer admin_flag;
+    
     @Column(name="created_at",nullable=false)
     private  Timestamp created_at;
 
-    @Column(name="update_at",nullable=false)
+    @Column(name="updated_at",nullable=false)
     private Timestamp updated_at;
 
     public Integer getId() {
@@ -105,6 +106,8 @@ public class Employee {
         this.created_at = created_at;
     }
 
+
+
     public Timestamp getUpdated_at() {
         return updated_at;
     }
@@ -112,6 +115,8 @@ public class Employee {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
+
 
     @Column(name="delete_flag",nullable=false)//削除された従業員かどうか
     private Integer delete_flag;

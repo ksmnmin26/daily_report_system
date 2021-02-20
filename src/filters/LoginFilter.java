@@ -32,14 +32,14 @@ public class LoginFilter implements Filter {
     /**
      * @see Filter#destroy()
      */
-    public void destroy() {
+   public void destroy() {
         // TODO Auto-generated method stub
     }
 
     /**
      * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
      */
-   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+  public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
        String context_path=((HttpServletRequest)request).getContextPath();
        String servlet_path=((HttpServletRequest)request).getServletPath();

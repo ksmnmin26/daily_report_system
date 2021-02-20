@@ -11,7 +11,7 @@
                     <tbody>
                         <tr>
                             <th>社員番号</th>
-                            <td><c:out value="${employee.code }"/></th>
+                            <td><c:out value="${employee.code }"/></td>
                         </tr>
                         <tr>
                             <th>氏名</th>
